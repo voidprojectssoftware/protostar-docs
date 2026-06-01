@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Protostar">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a5a8f7"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="14" fill="url(#g)"/>
+  <g stroke="#8a8df5" stroke-width="2.5" stroke-linecap="round">
+    <line x1="32" y1="2" x2="32" y2="14"/>
+    <line x1="32" y1="50" x2="32" y2="62"/>
+    <line x1="2" y1="32" x2="14" y2="32"/>
+    <line x1="50" y1="32" x2="62" y2="32"/>
+    <line x1="11" y1="11" x2="20" y2="20"/>
+    <line x1="44" y1="44" x2="53" y2="53"/>
+    <line x1="53" y1="11" x2="44" y2="20"/>
+    <line x1="20" y1="44" x2="11" y2="53"/>
+  </g>
+</svg>

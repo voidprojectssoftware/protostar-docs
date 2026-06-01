@@ -1,0 +1,25 @@
+# Dependencies
+/node_modules
+
+# Docusaurus build output and cache
+/build
+/.docusaurus
+
+# Lifted product docs — fetched at build time, never committed. This is what
+# keeps the hub a clean orchestrator with a single source of truth per product.
+/external
+
+# Local env
+.env
+.env.local
+.DS_Store
+
+# --- Hosting / infra must never live in this public repo ---
+# Deploy config belongs in the separate private deploy repo. These entries are
+# belt-and-suspenders so a stray host config can't be committed by accident.
+/CNAME
+wrangler.toml
+netlify.toml
+vercel.json
+**/cloudflared/
+*.tunnel.json

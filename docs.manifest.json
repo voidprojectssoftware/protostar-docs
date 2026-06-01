@@ -1,0 +1,14 @@
+{
+  "$comment": "Single source of truth for which product repos contribute docs to the hub. Add a product = add an entry here; the build wires up routing, sidebar, and the 'edit this page' link automatically. Keep this file free of any hosting/infra detail.",
+  "products": [
+    {
+      "id": "protostar-cli",
+      "label": "CLI",
+      "repo": "voidprojectssoftware/protostar-cli",
+      "ref": "main",
+      "docsPath": "docs",
+      "routeBasePath": "cli",
+      "navbarPosition": "left"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# PR build-check ONLY. This is the single workflow allowed in this public repo.
+# It compiles the site to catch broken links / bad frontmatter. It has NO
+# secrets and NO deploy step — deployment lives in a separate private repo (see
+# DEPLOYMENT.md). Do not add secrets, do not add a deploy job, and never switch
+# this to pull_request_target.
+name: build-check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Read-only token. This job never needs more.
+permissions:
+  contents: read
+
+concurrency:
+  group: build-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Pin actions to a full commit SHA (supply-chain hardening).
+      # actions/checkout@v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      # actions/setup-node@v4.1.0
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Pull each product's docs from GitHub at the manifest's pinned ref.
+      # --remote so the check never depends on local sibling checkouts.
+      - run: node scripts/fetch-docs.mjs --remote
+
+      # onBrokenLinks: 'throw' means a broken cross-reference fails here.
+      - run: npm run build:no-fetch

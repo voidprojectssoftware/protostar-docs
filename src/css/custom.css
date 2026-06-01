@@ -1,0 +1,26 @@
+/**
+ * Site-wide theme. Kept deliberately small; per-component docs inherit this.
+ */
+
+:root {
+  --ifm-color-primary: #4f46e5;
+  --ifm-color-primary-dark: #4338ca;
+  --ifm-color-primary-darker: #3f3bbf;
+  --ifm-color-primary-darkest: #34309d;
+  --ifm-color-primary-light: #6366f1;
+  --ifm-color-primary-lighter: #6f72f2;
+  --ifm-color-primary-lightest: #8a8df5;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #8a8df5;
+  --ifm-color-primary-dark: #6f72f2;
+  --ifm-color-primary-darker: #6366f1;
+  --ifm-color-primary-darkest: #4f46e5;
+  --ifm-color-primary-light: #a5a8f7;
+  --ifm-color-primary-lighter: #b3b6f9;
+  --ifm-color-primary-lightest: #cdcffb;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
