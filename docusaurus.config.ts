@@ -110,6 +110,17 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    // Site-wide early-stage disclaimer. Protostar's docs are AI-drafted and not
+    // yet human-reviewed; this banner makes that clear on every page. Remove it
+    // once the docs have had a proper review pass.
+    announcementBar: {
+      id: 'ai-generated-docs',
+      content:
+        'These docs are AI-generated and have not been reviewed yet. Protostar is in early development, so content may be incomplete or inaccurate.',
+      backgroundColor: '#fde68a',
+      textColor: '#1f2937',
+      isCloseable: false,
+    },
     navbar: {
       title: 'Protostar',
       logo: {
