@@ -20,7 +20,11 @@ Protostar is built as a set of components, each developed in its own repository
 with its docs living next to the code. This site lifts those docs into one place:
 
 - **[CLI](/cli)** — the `protostar` command-line tool: a self-contained binary
-  you can run without installing the .NET runtime.
+  you can run without installing the .NET runtime. This is what you install and
+  run on your own machine.
+- **[Registry](/registry)** — the service the CLI syncs to: identity, the
+  versioned API, and (as the loop fills in) the home of the refinement engine.
+  Aimed at people who run, operate, or develop the service.
 
 More components will appear here as they land. Each one keeps its docs in its own
 repo; this hub aggregates them at build time.

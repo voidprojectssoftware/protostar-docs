@@ -9,6 +9,15 @@
       "docsPath": "docs",
       "routeBasePath": "cli",
       "navbarPosition": "left"
+    },
+    {
+      "id": "protostar-registry",
+      "label": "Registry",
+      "repo": "voidprojectssoftware/protostar-registry",
+      "ref": "main",
+      "docsPath": "docs",
+      "routeBasePath": "registry",
+      "navbarPosition": "left"
     }
   ]
 }
